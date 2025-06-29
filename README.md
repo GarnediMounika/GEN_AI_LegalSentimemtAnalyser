@@ -27,12 +27,14 @@ You can provide the legal text:
 **Example Input:**  "The client’s tone was aggressive and accusatory regarding the non-compliance of clause 7B in the service agreement."
 
 **Example JSON Response:**
-```json
+json
 {
   "sentiment": "Negative",
   "confidence": 0.91,
   "summary": "Expresses frustration over non-compliance of contractual obligations."
 }
+
+
 🧰 Tech Stack
 Layer	Technology
 👨‍💻 Backend	Python, Flask, Hugging Face Transformers
