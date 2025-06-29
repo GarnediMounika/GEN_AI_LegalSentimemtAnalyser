@@ -95,4 +95,5 @@ Add topic tagging (Contracts, Privacy, Liability, etc.)
 
 Expand dataset with scraped court records and judgments
 
+![image](https://github.com/user-attachments/assets/bc76fc5a-19fc-4fba-9d77-e4ad6f90f375)
 
