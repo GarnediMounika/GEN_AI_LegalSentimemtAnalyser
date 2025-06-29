@@ -77,8 +77,7 @@ README.md	This file 📄
 👩‍💻 Author
 Mounika Garnedi
 AI & ML Enthusiast | NLP Developer
-📧 Email: mounika@example.com
-🌐 Portfolio/LinkedIn/GitHub links can go here (optional)
+
 
 ✅ Ideal For
 Resume & Portfolio Projects
