@@ -1,116 +1,109 @@
 # GEN_AI_LegalSentimemtAnalyser
-# ⚖️ AI Legal Sentiment Analyzer
+# ⚖️ Legal Sentiment Analyzer
 
-A full-stack AI-powered web application that automates the **sentiment analysis of legal documents**, such as contracts, case summaries, and client feedback. Built using cutting-edge NLP models like `FLAN-T5`, `BERT`, or `Mistral`, this tool helps law firms and compliance teams quickly evaluate tone and implications in legal text.
+**Author**: Mounika Garnedi  
+**Specialization**: AI & Machine Learning, NLP Applications  
+**Project Type**: NLP, Sentiment Analysis, Model Deployment  
+**Interface**: Gradio Web App  
 
-## 🚀 Features
+---
 
-- 🔍 **Sentiment Classification**: Detect whether the input legal text is *Positive*, *Neutral*, or *Negative*.
-- 🧠 **Foundation Model Powered**: Uses pre-trained models like FLAN-T5 or Mistral for zero/few-shot performance.
-- 📄 **Optional Summarization**: Generates a short summary explaining the sentiment.
-- 🌐 **Full-Stack Web Interface**: Includes a responsive frontend and a Flask backend served from Google Colab.
-- ⚡ **Rapid API Response**: Real-time classification with ngrok tunnel for public access.
-- 📝 **Easy Deployment**: No installation required—everything runs from a Colab notebook and a static HTML page.
+## 📌 Project Overview
 
-## 🧪 Use Cases
+**Legal Sentiment Analyzer** is a fine-tuned NLP application that automatically classifies legal text (such as contract clauses, case summaries, or policy descriptions) into **Positive**, **Neutral**, or **Negative** sentiments.
 
-- 📁 **Law Firms**: Automate tone-checking in contracts and case notes.
-- 🧾 **Compliance Teams**: Flag negative sentiment in legal correspondence.
-- 💬 **Client Feedback Analysis**: Understand client tone in legal communications.
+It uses `DistilBERT`, a transformer-based language model, and was trained on a custom dataset of 1000+ legal samples.
 
-## 📥 Input Format
+---
 
-You can provide the legal text:
-- Via a **text box** in the web UI
-- (Coming soon) Upload `.txt` or `.csv` documents
+## 🎯 Key Features
 
-**Example Input:**  "The client’s tone was aggressive and accusatory regarding the non-compliance of clause 7B in the service agreement."
+- ✅ **Trained Transformer Model** (`DistilBERT`) for legal sentiment classification  
+- ✅ **Custom dataset** built for legal domain sentiment labels  
+- ✅ **Gradio Web App** with shareable public link (no HTML or JS required)  
+- ✅ Clean and professional UI for demo and resume projects
 
-**Example JSON Response:**
-json
-{
-  "sentiment": "Negative",
-  "confidence": 0.91,
-  "summary": "Expresses frustration over non-compliance of contractual obligations."
-}
+---
 
+## 🛠️ Technologies Used
 
-🧰 Tech Stack
-Layer	Technology
-👨‍💻 Backend	Python, Flask, Hugging Face Transformers
-🌐 Frontend	HTML, CSS, JavaScript (Vanilla)
-⚙️ Models	FLAN-T5, BERT, or Mistral (via Transformers)
-☁️ Hosting	Google Colab + Flask + ngrok
+| Component          | Tool / Framework                      |
+|-------------------|----------------------------------------|
+| Model              | `DistilBERT` via Hugging Face 🤗 Transformers |
+| Training           | PyTorch + `Trainer` API                |
+| Interface (Web UI) | Gradio                                 |
+| Dataset Format     | CSV (1000+ rows)                       |
+| Deployment         | Colab + Gradio (via `share=True`)      |
 
-🔧 Setup & Run Instructions
-▶️ Step 1: Run the Backend on Google Colab
-Open the provided Colab Notebook
+---
 
-It:
+## 🧠 How It Works
 
-Loads the pre-trained sentiment model
+1. Load and preprocess the dataset (`legal_sentiment_dataset.csv`)
+2. Fine-tune DistilBERT on custom sentiment labels
+3. Save trained model to `/content/legal_sentiment_model/`
+4. Deploy via Gradio with a simple text input interface
 
-Spins up a Flask server
+---
 
-Exposes it via ngrok at a public URL (like https://abc123.ngrok.io)
+## 🚀 How to Run the Project
 
-You’ll see your API endpoint in the Colab output
+### ✅ Step 1: Clone the Repo
 
-🌐 Step 2: Use the Frontend
-Open the index.html file in your browser
+```bash
+git clone https://github.com/your-username/legal-sentiment-analyzer.git
+cd legal-sentiment-analyzer
+✅ Step 2: Open LegalSentimentAnalyzer.ipynb in Google Colab
+Train and deploy in one click using Colab.
 
-Paste your legal text and click Analyze
+🌐 Try the Web App
+⚠️ Gradio links are temporary. Run the final Gradio cell to get a public link like this:
 
-The result appears with:
-
-📌 Sentiment label
-
-🧠 Summary (optional)
-
-⏱️ Response time
-
-📂 Project Structure
-bash
+arduino
 Copy
 Edit
-├── README.md
-├── ai_legal_sentiment_analyzer.ipynb  # Colab backend
-├── static/
-│   └── style.css                      # Styling
-├── templates/
-│   └── index.html                     # Frontend UI
-└── app.py                             # Flask API (for local runs)
-💡 Sample Prompts Used
-Few-shot prompt examples used for FLAN-T5:
+https://mounika-legal-app.gradio.live
+Paste the link in browser to test the model live.
 
-mathematica
+🧪 Sample Prediction
+Input:
+
+nginx
 Copy
 Edit
-Classify the sentiment of the following legal sentence as Positive, Neutral, or Negative:
-"The clause in the agreement is unfair and burdensome." → Negative
-"The parties agree to collaborate on the joint venture." → Positive
-📈 Future Enhancements
-📎 File Upload Support (.txt, .docx)
+The client has consistently breached the contract despite multiple notices.
+Output:
 
-📊 Dashboard for bulk document analysis
+yaml
+Copy
+Edit
+📘 Sentiment: Negative
+📂 Files Included
+File	Description
+legal_sentiment_dataset.csv	Custom training dataset (1000+ entries)
+LegalSentimentAnalyzer.ipynb	Full training + deployment notebook
+README.md	This file 📄
 
-🛡️ Authenticated API for secure legal deployment
-
-🌍 Multilingual Legal Text Support
-
-🧑‍💼 Author
+👩‍💻 Author
 Mounika Garnedi
-🎓 B.Tech CSE (AI & ML)
-💼 Passionate about NLP, Deep Learning, and Building Real AI Products
-🌐 LinkedIn | GitHub
+AI & ML Enthusiast | NLP Developer
+📧 Email: mounika@example.com
+🌐 Portfolio/LinkedIn/GitHub links can go here (optional)
 
-📄 License
-This project is licensed under the MIT License.
+✅ Ideal For
+Resume & Portfolio Projects
 
-🙌 Acknowledgments
-Hugging Face Transformers
+Showcasing applied NLP skills
 
-Google Colab
+Interview Demos (live link)
 
-IBM watsonx.ai (optional Prompt Lab)
+Academic or internship submissions
+
+💡 Future Improvements
+Host permanently on Hugging Face Spaces or Render
+
+Add topic tagging (Contracts, Privacy, Liability, etc.)
+
+Expand dataset with scraped court records and judgments
+
 
