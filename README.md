@@ -50,34 +50,24 @@ It uses `DistilBERT`, a transformer-based language model, and was trained on a c
 
 ### ✅ Step 1: Clone the Repo
 
-```bash
+bash
 git clone https://github.com/your-username/legal-sentiment-analyzer.git
 cd legal-sentiment-analyzer
+
+
 ✅ Step 2: Open LegalSentimentAnalyzer.ipynb in Google Colab
 Train and deploy in one click using Colab.
 
 🌐 Try the Web App
 ⚠️ Gradio links are temporary. Run the final Gradio cell to get a public link like this:
 
-arduino
-Copy
-Edit
 https://mounika-legal-app.gradio.live
 Paste the link in browser to test the model live.
 
-🧪 Sample Prediction
-Input:
+# Sample Prediction
+Input: The client has consistently breached the contract despite multiple notices.
+Output: Sentiment: Negative
 
-nginx
-Copy
-Edit
-The client has consistently breached the contract despite multiple notices.
-Output:
-
-yaml
-Copy
-Edit
-📘 Sentiment: Negative
 📂 Files Included
 File	Description
 legal_sentiment_dataset.csv	Custom training dataset (1000+ entries)
